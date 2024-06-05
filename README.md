@@ -5,7 +5,7 @@
 Soient $E$ un ensemble et $D$ un sous-ensemble connexe et borné de E. On définit l'enveloppe équidiamétrique de $D$ par
 
 $$
-\mathcal{E}(D) = \{ M \in E \space ∣ \space \exists \space (A,B) \in D^2, \space \delta(M,A) \leq \delta(A,B)\}
+\mathcal{E}(D) = \\{ M \in E \space ∣ \space \exists \space (A,B) \in D^2, \space \delta(M,A) \leq \delta(A,B)\\}
 $$
 
 où $\delta$ représente la distance euclidienne.

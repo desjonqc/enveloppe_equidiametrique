@@ -98,7 +98,7 @@ animation.sauvegarder("chemin_vers_le_fichier.gif")  # Sauvegarde l'animation
 
 Par exemple, en prenant $D$ égal à un arc de cercle de degré $\theta$ variant de $0$ à $2\pi$, on obtient ce résultat :
 
-<img src="https://github.com/HoxiSword/enveloppe_equidiametrique/blob/master/resultats/evolution_arcs.gif" width="400" />
+<img src="https://github.com/desjonqc/enveloppe_equidiametrique/blob/master/resultats/evolution_arcs.gif" width="400" />
 
 ## Création de formes géométriques
 
@@ -123,4 +123,4 @@ Il y a plusieurs fonctions à disposition dans le module `geometrie` permettant 
 
 On obtient un algorithme permettant de réaliser une approximation numérique de l'enveloppe équidiamétrique d'une ensemble convexe borné.
 
-<img src="https://github.com/HoxiSword/enveloppe_equidiametrique/blob/master/resultats/texas.png" width="500" >
+<img src="https://github.com/desjonqc/enveloppe_equidiametrique/blob/master/resultats/texas.png" width="500" >

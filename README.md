@@ -5,7 +5,7 @@
 Soient $E$ un ensemble et $D$ un sous-ensemble connexe et borné de E. On définit l'enveloppe équidiamétrique de $D$ par
 
 $$
-\mathcal{E}(D) = \{ M \in E \space ∣ \space \exist \space (A,B) \in D^2, \space \delta(M,A) \leq \delta(A,B)\}
+\mathcal{E}(D) = \{ M \in E \space ∣ \space \exists \space (A,B) \in D^2, \space \delta(M,A) \leq \delta(A,B)\}
 $$
 
 où $\delta$ représente la distance euclidienne.
@@ -98,7 +98,7 @@ animation.sauvegarder("chemin_vers_le_fichier.gif")  # Sauvegarde l'animation
 
 Par exemple, en prenant $D$ égal à un arc de cercle de degré $\theta$ variant de $0$ à $2\pi$, on obtient ce résultat :
 
-<img src="file://C:/Cours_Java/evolution_arcs.gif" width="400" />
+<img src="https://github.com/HoxiSword/enveloppe_equidiametrique/blob/master/resultats/evolution_arcs.gif" width="400" />
 
 ## Création de formes géométriques
 
@@ -123,4 +123,4 @@ Il y a plusieurs fonctions à disposition dans le module `geometrie` permettant 
 
 On obtient un algorithme permettant de réaliser une approximation numérique de l'enveloppe équidiamétrique d'une ensemble convexe borné.
 
-<img src="file://C:/Cours_Java/texas.png" width="500" >
+<img src="https://github.com/HoxiSword/enveloppe_equidiametrique/blob/master/resultats/texas.png" width="500" >

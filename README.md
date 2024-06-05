@@ -4,7 +4,11 @@
 
 Soient $E$ un ensemble et $D$ un sous-ensemble connexe et borné de E. On définit l'enveloppe équidiamétrique de $D$ par
 
-E={M∈E ∣ ∃ (A,B)∈D2, δ(M,A)≤δ(A,B)}où $\delta$ représente la distance euclidienne.
+$$
+\mathcal{E}(D) = \{ M \in E \space ∣ \space \exist \space (A,B) \in D^2, \space \delta(M,A) \leq \delta(A,B)\}
+$$
+
+où $\delta$ représente la distance euclidienne.
 
 ## Présentation des objets
 
@@ -20,10 +24,10 @@ from enveloppe import Ensemble
 elem = ...  # Tableau numpy contenant les éléments
 ensemble = Ensemble(elem)
 ```
+
 ### Méthode de calcul
 
 Pour créer une méthode de calcul, il suffit de créer un objet héritant de la classe `enveloppe.CalculateurEnveloppe` et de remplir comme on le souhaite les fonctions abstraites.
-
 
 Pour utiliser la seule méthode implémentée à partir d'un ensemble $D$, il suffit d'écrire :
 
@@ -32,6 +36,7 @@ from enveloppe import Calculateur1
 
 methode = Calculateur1(ensemble)
 ```
+
 ### Calcul de l'enveloppe
 
 **Pour tout usage de OpenCL, écrire au préalable :**
@@ -41,6 +46,7 @@ from opencl import OpenCLProgram
 
 programme = OpenCLProgram("functions.cl")
 ```
+
 Pour calculer l'enveloppe équidiamétrique, on utilise la synthaxe suivante :
 
 ```python
@@ -48,6 +54,7 @@ resultat = methode.enveloppe_equidiametrique_cl(programme, marge, reduite)  # Ca
 
 resultats = methode.iteration_enveloppe_cl(programme, marge, N)  # Calcul de N itérations (renvoie une liste contenant les N enveloppes)
 ```
+
 Pour calculer les enveloppes d'un ensemble $D$ évolutif, afin d'observer le comportement de l'enveloppe d'un ensemble D variable on utilise la fonction `enveloppe.evolution(programme, methode_classe, ensembles, marge)` où methode_classe est le type (au sens python) du calculateur à appliquer, ensembles est une liste représentant l'évolution de D.
 
 Par exemple,
@@ -58,6 +65,7 @@ from enveloppe import evolution
 ensembles = [ensemble1, ensemble2, ...]  # L'évolution de D
 evolutions = evolution(programme, Calculateur1, ensembles, marge)
 ```
+
 ## Affichage des résultats
 
 Pour afficher simplement un ensemble, on utilise la fonction `Ensemble.afficher()`.
@@ -74,6 +82,7 @@ animation.afficher()  # Affiche l'animation
 
 animation.sauvegarder("chemin_vers_le_fichier.gif")  # Sauvegarde l'animation
 ```
+
 ### Afficher les évolutions
 
 Même principe, mais l'objet diffère : on utilise l'objet `affichage.EvolutionAnimation`.
@@ -86,10 +95,10 @@ animation.afficher()  # Affiche l'animation
 
 animation.sauvegarder("chemin_vers_le_fichier.gif")  # Sauvegarde l'animation
 ```
+
 Par exemple, en prenant $D$ égal à un arc de cercle de degré $\theta$ variant de $0$ à $2\pi$, on obtient ce résultat :
 
 <img src="file://C:/Cours_Java/evolution_arcs.gif" width="400" />
-
 
 ## Création de formes géométriques
 
